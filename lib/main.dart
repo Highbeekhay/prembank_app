@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prembank_app/transfer_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -231,296 +232,208 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
-              scrollDirection: Axis.vertical,
-              child: Container(
-                padding: EdgeInsets.fromLTRB(20, 35, 20, 30),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Container(
+              padding: EdgeInsets.fromLTRB(20, 35, 20, 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            "Cards",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Icon(
+                            Icons.keyboard_arrow_down_sharp,
+                            color: Colors.black38,
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.add,
+                            size: 17,
+                            weight: 10,
+                            color: Colors.blue,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'Open new',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 17,
+                            ),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey.shade100,
+                    ),
+                    child: Column(
                       children: [
                         Row(
                           children: [
+                            CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: Text(
+                                "MC",
+                                style: TextStyle(
+                                  color: Colors.yellow,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'MasterCard PremuiumB',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '**** 0551',
+                                  style: TextStyle(
+                                    color: Colors.black38,
+                                    letterSpacing: 3,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 104,
+                            ),
                             Text(
-                              "Cards",
+                              "\$3,240.30",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Icon(
-                              Icons.keyboard_arrow_down_sharp,
-                              color: Colors.black38,
-                            )
                           ],
+                        ),
+                        Divider(
+                          color: Colors.black12,
+                          indent: 40,
                         ),
                         Row(
                           children: [
-                            Icon(
-                              Icons.add,
-                              size: 17,
-                              weight: 10,
-                              color: Colors.blue,
+                            CircleAvatar(
+                              backgroundColor: Colors.white,
+                              child: Text(
+                                "VISA",
+                                style: TextStyle(
+                                  color: Colors.blue,
+                                ),
+                              ),
                             ),
                             SizedBox(
-                              width: 5,
+                              width: 10,
                             ),
-                            Text(
-                              'Open new',
-                              style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 17,
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.shade100,
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Text(
-                                  "MC",
-                                  style: TextStyle(
-                                    color: Colors.yellow,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'MasterCard PremuiumB',
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    '**** 0551',
-                                    style: TextStyle(
-                                      color: Colors.black38,
-                                      letterSpacing: 3,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 104,
-                              ),
-                              Text(
-                                "\$3,240.30",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                          Divider(
-                            color: Colors.black12,
-                            indent: 40,
-                          ),
-                          Row(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Text(
-                                  "VISA",
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Visa Premium',
-                                    style: TextStyle(
-                                      fontSize: 17,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text(
-                                    '**** 1289',
-                                    style: TextStyle(
-                                      color: Colors.black38,
-                                      letterSpacing: 3,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                width: 198,
-                              ),
-                              Text(
-                                "\$140.00",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 40,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "Deposits & accounts",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.keyboard_arrow_down_sharp,
-                                    color: Colors.white12,
-                                  )
-                                ],
-                              ),
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.add,
-                                    size: 17,
-                                    weight: 10,
-                                    color: Colors.blue,
-                                  ),
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  Text(
-                                    'Open new',
-                                    style: TextStyle(
-                                      color: Colors.blue,
-                                      fontSize: 17,
-                                    ),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.grey.shade100,
-                            ),
-                            child: Column(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Row(
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.white,
-                                      child: Icon(
-                                        Icons.account_balance,
-                                        color: Colors.blue,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Replenishment dep...',
-                                          style: TextStyle(
-                                            fontSize: 17,
-                                            color: Colors.black,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Text(
-                                          '12.09.2023',
-                                          style: TextStyle(
-                                            color: Colors.black38,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                      width: 127,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          "\$3,240.30",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        Text(
-                                          "3.4%",
-                                          style: TextStyle(
-                                            color: Colors.black38,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ],
+                                Text(
+                                  'Visa Premium',
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '**** 1289',
+                                  style: TextStyle(
+                                    color: Colors.black38,
+                                    letterSpacing: 3,
+                                  ),
                                 ),
                               ],
                             ),
-                          )
-                        ],
-                      ),
+                            SizedBox(
+                              width: 198,
+                            ),
+                            Text(
+                              "\$140.00",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 40,
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Column(
                       children: [
-                        Text(
-                          "Credits",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  "Deposits & accounts",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.keyboard_arrow_down_sharp,
+                                  color: Colors.white12,
+                                )
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.add,
+                                  size: 17,
+                                  weight: 10,
+                                  color: Colors.blue,
+                                ),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Text(
+                                  'Open new',
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 17,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
                         ),
                         Container(
                           padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
@@ -535,7 +448,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   CircleAvatar(
                                     backgroundColor: Colors.white,
                                     child: Icon(
-                                      Icons.folder,
+                                      Icons.account_balance,
                                       color: Colors.blue,
                                     ),
                                   ),
@@ -547,7 +460,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Calculate and take a credit',
+                                        'Replenishment dep...',
                                         style: TextStyle(
                                           fontSize: 17,
                                           color: Colors.black,
@@ -555,7 +468,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         ),
                                       ),
                                       Text(
-                                        'Create regular payments and transfers',
+                                        '12.09.2023',
                                         style: TextStyle(
                                           color: Colors.black38,
                                           fontWeight: FontWeight.bold,
@@ -564,11 +477,27 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ],
                                   ),
                                   SizedBox(
-                                    width: 110,
+                                    width: 127,
                                   ),
-                                  Icon(
-                                    Icons.arrow_forward_ios,
-                                  )
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        "\$3,240.30",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        "3.4%",
+                                        style: TextStyle(
+                                          color: Colors.black38,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
@@ -576,55 +505,190 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.grey.shade100,
-                          child: Icon(
-                            Icons.location_on_sharp,
-                            color: Colors.blue,
-                          ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Credits",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
-                        SizedBox(
-                          width: 10,
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.shade100,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        child: Column(
                           children: [
-                            Text(
-                              'ATMs and bank offices',
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Show offices and ATMs on map',
-                              style: TextStyle(
-                                color: Colors.black38,
-                                fontWeight: FontWeight.bold,
-                              ),
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  child: Icon(
+                                    Icons.folder,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Calculate and take a credit',
+                                      style: TextStyle(
+                                        fontSize: 17,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Create regular payments and transfers',
+                                      style: TextStyle(
+                                        color: Colors.black38,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 110,
+                                ),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                )
+                              ],
                             ),
                           ],
                         ),
-                        SizedBox(
-                          width: 175,
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.grey.shade100,
+                        child: Icon(
+                          Icons.location_on_sharp,
+                          color: Colors.blue,
                         ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'ATMs and bank offices',
+                            style: TextStyle(
+                              fontSize: 17,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            'Show offices and ATMs on map',
+                            style: TextStyle(
+                              color: Colors.black38,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 175,
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                      )
+                    ],
+                  ),
+                ],
               ),
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: ButtonBar(
+        children: [
+          Container(
+            padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
+            decoration: BoxDecoration(),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                  ),
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.home,
+                    color: Colors.blue.shade800,
+                  ),
+                ),
+                SizedBox(
+                  width: 72,
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => TransferPage(),
+                      ),
+                    );
+                  },
+                  child: Icon(
+                    Icons.credit_card,
+                    color: Colors.blue.shade800,
+                  ),
+                ),
+                SizedBox(
+                  width: 72,
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                  ),
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.pie_chart_outline,
+                    color: Colors.blue.shade800,
+                  ),
+                ),
+                SizedBox(
+                  width: 72,
+                ),
+                TextButton(
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.transparent,
+                  ),
+                  onPressed: () {},
+                  child: Icon(
+                    Icons.chat_bubble_outline,
+                    color: Colors.blue.shade800,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
