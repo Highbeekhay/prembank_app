@@ -450,7 +450,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     CircleAvatar(
                                       backgroundColor: Colors.white,
                                       child: Icon(
-                                        Icons.add,
+                                        Icons.account_balance,
                                         color: Colors.blue,
                                       ),
                                     ),
@@ -508,6 +508,116 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Credits",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(10, 15, 20, 15),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey.shade100,
+                          ),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    child: Icon(
+                                      Icons.folder,
+                                      color: Colors.blue,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Calculate and take a credit',
+                                        style: TextStyle(
+                                          fontSize: 17,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Create regular payments and transfers',
+                                        style: TextStyle(
+                                          color: Colors.black38,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 110,
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios,
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.grey.shade100,
+                          child: Icon(
+                            Icons.location_on_sharp,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'ATMs and bank offices',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Show offices and ATMs on map',
+                              style: TextStyle(
+                                color: Colors.black38,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 175,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                        )
+                      ],
                     ),
                   ],
                 ),
