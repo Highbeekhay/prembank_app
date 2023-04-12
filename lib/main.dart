@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prembank_app/transfer_page.dart';
+import 'package:prembank_app/visa_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -337,51 +338,67 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.black12,
                           indent: 40,
                         ),
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: Text(
-                                "VISA",
+                        TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.grey.shade100,
+                              onSurface: Colors.grey.shade100,
+                              side: BorderSide.none,
+                              padding: EdgeInsets.all(0)),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VisaPage(),
+                              ),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: Text(
+                                  "VISA",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Visa Premium',
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    '**** 1289',
+                                    style: TextStyle(
+                                      color: Colors.black38,
+                                      letterSpacing: 3,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 198,
+                              ),
+                              Text(
+                                "\$140.00",
                                 style: TextStyle(
-                                  color: Colors.blue,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
                                 ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Visa Premium',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '**** 1289',
-                                  style: TextStyle(
-                                    color: Colors.black38,
-                                    letterSpacing: 3,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 198,
-                            ),
-                            Text(
-                              "\$140.00",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
