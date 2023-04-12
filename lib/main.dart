@@ -635,7 +635,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   onPressed: () {},
                   child: Icon(
-                    Icons.home,
+                    Icons.home_outlined,
                     color: Colors.blue.shade800,
                   ),
                 ),
@@ -645,6 +645,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.transparent,
+                    surfaceTintColor: Colors.blue.shade800,
                   ),
                   onPressed: () {
                     Navigator.push(
