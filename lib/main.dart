@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prembank_app/finances_page.dart';
 import 'package:prembank_app/transfer_page.dart';
 import 'package:prembank_app/visa_page.dart';
 
@@ -288,51 +289,66 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.white,
-                              child: Text(
-                                "MC",
+                        TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.grey.shade100,
+                              onSurface: Colors.grey.shade100,
+                              side: BorderSide.none,
+                              padding: EdgeInsets.all(0)),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => FinancesPage(),
+                              ),
+                            );
+                          },
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: Text(
+                                  "MC",
+                                  style: TextStyle(
+                                    color: Colors.yellow,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'MasterCard PremuiumB',
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    '**** 0551',
+                                    style: TextStyle(
+                                      color: Colors.black38,
+                                      letterSpacing: 3,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 104,
+                              ),
+                              Text(
+                                "\$3,240.30",
                                 style: TextStyle(
-                                  color: Colors.yellow,
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'MasterCard PremuiumB',
-                                  style: TextStyle(
-                                    fontSize: 17,
-                                    color: Colors.black,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '**** 0551',
-                                  style: TextStyle(
-                                    color: Colors.black38,
-                                    letterSpacing: 3,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 104,
-                            ),
-                            Text(
-                              "\$3,240.30",
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
+                                    color: Colors.black),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                         Divider(
                           color: Colors.black12,
