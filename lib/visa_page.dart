@@ -60,6 +60,18 @@ class _VisaPageState extends State<VisaPage> {
                       border: Border.all(
                         color: Colors.white12,
                       ),
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.purple.shade700,
+                          Colors.purple.shade300,
+                          Colors.blue.shade700,
+                          Colors.blue.shade800,
+                        ],
+                        transform: GradientRotation(2 / 4),
+                        begin: AlignmentDirectional.topStart,
+                        end: AlignmentDirectional.bottomEnd,
+                        tileMode: TileMode.clamp,
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,

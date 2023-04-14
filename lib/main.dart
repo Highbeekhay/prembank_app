@@ -343,9 +343,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               Text(
                                 "\$3,240.30",
                                 style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
                               ),
                             ],
                           ),
