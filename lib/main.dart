@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prembank_app/finances_page.dart';
+import 'package:prembank_app/send_page.dart';
 import 'package:prembank_app/transfer_page.dart';
 import 'package:prembank_app/visa_page.dart';
 
@@ -104,7 +105,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => SendPage(),
+                                  ),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                 shape: CircleBorder(
                                   side: BorderSide(

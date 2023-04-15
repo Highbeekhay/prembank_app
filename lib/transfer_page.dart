@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prembank_app/between_accounts_page.dart';
 
 class TransferPage extends StatefulWidget {
   const TransferPage({super.key});
@@ -261,25 +262,35 @@ class _TransferPageState extends State<TransferPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
-                    leading: TextButton(
-                      style: TextButton.styleFrom(
-                        shape: CircleBorder(),
-                        backgroundColor: Colors.grey.shade100,
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BetweenAccountsPage(),
+                        ),
+                      );
+                    },
+                    child: ListTile(
+                      leading: TextButton(
+                        style: TextButton.styleFrom(
+                          shape: CircleBorder(),
+                          backgroundColor: Colors.grey.shade100,
+                        ),
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.swap_horiz_outlined,
+                          color: Colors.blue,
+                        ),
                       ),
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.swap_horiz_outlined,
-                        color: Colors.blue,
+                      title: Text(
+                        'Between my accounts',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      trailing: Icon(Icons.arrow_forward_ios_outlined),
                     ),
-                    title: Text(
-                      'Between my accounts',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_outlined),
                   ),
                   Divider(
                     indent: 85,
