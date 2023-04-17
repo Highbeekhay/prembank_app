@@ -39,6 +39,8 @@ dependencies:
   pie_chart: ^5.3.2
   animated_pie_chart: ^0.0.2
   awesome_circular_chart: ^1.0.0
+  pinput: ^2.2.31
+  pin_plus_keyboard: ^2.0.6
 
 dev_dependencies:
   flutter_test:

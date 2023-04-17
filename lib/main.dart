@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prembank_app/finances_page.dart';
+import 'package:prembank_app/login_page.dart';
 import 'package:prembank_app/send_page.dart';
 import 'package:prembank_app/transfer_page.dart';
 import 'package:prembank_app/visa_page.dart';
@@ -709,7 +710,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.transparent,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginPage(),
+                      ),
+                    );
+                  },
                   child: Icon(
                     Icons.pie_chart_outline,
                     color: Colors.blue.shade800,
