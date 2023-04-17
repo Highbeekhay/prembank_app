@@ -58,6 +58,7 @@ class _LoginPageState extends State<LoginPage> {
               inputHasBorder: false,
               inputFillColor: Colors.white,
               buttonFillColor: Colors.white,
+              cancelColor: Colors.blue,
               inputElevation: 5,
               btnShadowColor: Colors.grey.shade300,
               btnTextColor: Colors.blue,
